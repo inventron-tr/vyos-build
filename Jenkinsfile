@@ -45,21 +45,6 @@ node('Docker') {
     }
     stage('Build Docker container') {
         parallel (
-            'x86-64': {
-                script {
-                    dir('docker') {
-                        sh """
-                            docker build -t ${env.DOCKER_IMAGE} .
-                        """
-                        if ( ! isCustomBuild()) {
-                            withDockerRegistry([credentialsId: "DockerHub"]) {
-                                sh "docker push ${env.DOCKER_IMAGE}"
-                            }
-
-                        }
-                    }
-                }
-            },
 //          'armhf': {
 //              script {
 //                  dir('docker') {
@@ -82,7 +67,6 @@ node('Docker') {
                   dir('docker') {
                       sh """
                           docker build -t ${env.DOCKER_IMAGE_ARM64} --build-arg ARCH=arm64v8/ .
-
                       """
 
                       if ( ! isCustomBuild()) {

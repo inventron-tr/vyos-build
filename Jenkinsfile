@@ -38,7 +38,7 @@ env.DOCKER_IMAGE =       "vyos/vyos-build:" + getGitBranchName()
 env.DOCKER_IMAGE_ARM =   "vyos/vyos-build:" + getGitBranchName() + "-armhf"
 env.DOCKER_IMAGE_ARM64 = "vyos/vyos-build:" + getGitBranchName() + "-arm64"
 
-node('Dockerx') {
+node('master') {
     stage('Fetch') {
         git branch: getGitBranchName(),
             url: getGitRepoURL()

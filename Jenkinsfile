@@ -90,7 +90,7 @@ pipeline {
         timestamps()
     }
     triggers {
-        cron('H 23 * * *')
+        cron('H 1 * * *')
     }
     agent {
         dockerfile {
@@ -148,7 +148,7 @@ pipeline {
         success {
             script {
                 // only deploy ISO if build from official repository
-                if (isCustomBuild())
+                // if (isCustomBuild())
                     return
 
                 files = findFiles(glob: 'build/vyos*.iso')

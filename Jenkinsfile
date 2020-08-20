@@ -125,8 +125,7 @@ pipeline {
                             --build-by autobuild@vyos.net \
                             --debian-mirror http://ftp.us.debian.org/debian/ \
                             --build-type development \
-                            --architecture armhf \
-                            --version 1.3-rolling-\$(date +%Y%m%d%H%M)
+                            --architecture armhf
                         sudo make iso
                     """
 

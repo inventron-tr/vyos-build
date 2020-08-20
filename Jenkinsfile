@@ -85,12 +85,12 @@ node('Docker') {
 pipeline {
     options {
         disableConcurrentBuilds()
-        timeout(time: 2400, unit: 'MINUTES')
+        timeout(time: 48, unit: 'HOURS')
         parallelsAlwaysFailFast()
         timestamps()
     }
     triggers {
-        cron('H 96 * * *')
+        cron('H 23 * * *')
     }
     agent {
         dockerfile {

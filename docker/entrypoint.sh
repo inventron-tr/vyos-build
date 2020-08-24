@@ -17,6 +17,8 @@ fi
 
 # Notify user about selected UID/GID
 echo "Current UID/GID: $NEW_UID/$NEW_GID"
+TSTT=$(cat /etc/passwd)
+echo $TSTT
 
 # Create UNIX group on the fly if it does not exist
 if ! grep -q $NEW_GID /etc/group; then

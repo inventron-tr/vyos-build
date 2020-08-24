@@ -328,6 +328,10 @@ RUN if dpkg-architecture -ii386 || dpkg-architecture -iamd64; then \
         qemu-kvm; \
     fi
 
+RUN apt-get update && apt-get install -y \
+      qemu-user-static \
+      qemu-utils
+
 # Packages needed for building vmware and GCE images
 # This is only supported on i386 and amd64 platforms
 RUN if dpkg-architecture -ii386 || dpkg-architecture -iamd64; then \

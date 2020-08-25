@@ -61,7 +61,9 @@ lb config noauto \
         --security true \
         --backports true \
         --apt-recommends false \
-        --apt-options "--yes -oAPT::Default-Release="current" -oAPT::Get::allow-downgrades=true" \
+        --apt-options "--yes -oAPT::Default-Release="current" -oAPT::Get::allow-downgrades=true \
+                -oDebug::BuildDeps=true -oDebug::pkgDepCache::AutoInstall=true \
+                -oDebug::pkgDepCache::Marker=true -oDebug::pkgProblemResolver=true -oDebug::Acquire::gpgv=true" \
         --apt-indices false
         "${@}"
 """

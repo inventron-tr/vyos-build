@@ -17,6 +17,12 @@ prepare:
 	rm -rf build/config/*
 	mkdir -p build/config
 	cp -r data/live-build-config/* build/config/
+	cd packages
+	rm -f linux-image-4.19.114-armhf-vyos_4.19.114-1_armhf.deb linux-headers-4.19.114-armhf-vyos_4.19.114-1_armhf.deb linux-libc-dev_4.19.114-1_armhf.deb
+	wget http://192.168.1.3:8090/linux-image-4.19.114-armhf-vyos_4.19.114-1_armhf.deb
+	wget http://192.168.1.3:8090/linux-headers-4.19.114-armhf-vyos_4.19.114-1_armhf.deb
+	wget http://192.168.1.3:8090/linux-libc-dev_4.19.114-1_armhf.deb
+	cd ..
 	@scripts/live-build-config
 	@scripts/import-local-packages
 

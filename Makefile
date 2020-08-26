@@ -22,25 +22,46 @@ prepare:
 	wget http://192.168.1.3:8090/linux-image-4.19.114-armhf-vyos_4.19.114-1_armhf.deb
 	wget http://192.168.1.3:8090/linux-headers-4.19.114-armhf-vyos_4.19.114-1_armhf.deb
 	wget http://192.168.1.3:8090/linux-libc-dev_4.19.114-1_armhf.deb
-	test -f vyatta-cfg-system_0.20.44+vyos2+current22_armhf.deb && wget http://192.168.1.3:8090/vyatta-cfg-system_0.20.44+vyos2+current22_armhf.deb
-	test -f vyatta-bash_4.1-3+vyos2+current2_armhf.deb && wget http://192.168.1.3:8090/vyatta-bash_4.1-3+vyos2+current2_armhf.deb
-	test -f vyatta-op_0.14.0+vyos2+current8_all.deb && wget http://192.168.1.3:8090/vyatta-op_0.14.0+vyos2+current8_all.deb
-	test -f vyatta-cfg_0.102.0+vyos2+current4_armhf.deb && wget http://192.168.1.3:8090/vyatta-cfg_0.102.0+vyos2+current4_armhf.deb
-	test -f vyatta-config-mgmt_0.34+vyos2+current2_all.deb && wget http://192.168.1.3:8090/vyatta-config-mgmt_0.34+vyos2+current2_all.deb
-	test -f vyatta-cfg-firewall_0.14.0+vyos2+current2_all.deb && wget http://192.168.1.3:8090/vyatta-cfg-firewall_0.14.0+vyos2+current2_all.deb
-	test -f vyatta-op-firewall_0.11.0+vyos2+current1_all.deb && wget http://192.168.1.3:8090/vyatta-op-firewall_0.11.0+vyos2+current1_all.deb
-	test -f vyatta-cfg-qos_0.15.42+vyos2+current1_all.deb && wget http://192.168.1.3:8090/vyatta-cfg-qos_0.15.42+vyos2+current1_all.deb
-	test -f vyatta-op-qos_0.12.27+vyos2+current1_all.deb && wget http://192.168.1.3:8090/vyatta-op-qos_0.12.27+vyos2+current1_all.deb
-	test -f vyatta-cfg-quagga_0.19.1+vyos2+current9_all.deb && wget http://192.168.1.3:8090/vyatta-cfg-quagga_0.19.1+vyos2+current9_all.deb
-	test -f vyatta-op-quagga_0.11.35+vyos2+current1_all.deb && wget http://192.168.1.3:8090/vyatta-op-quagga_0.11.35+vyos2+current1_all.deb
-	test -f vyatta-cfg-vpn_0.12.105+vyos2+current6_all.deb && wget http://192.168.1.3:8090/vyatta-cfg-vpn_0.12.105+vyos2+current6_all.deb
-	test -f vyatta-op-vpn_0.15.0+vyos2+current2+nmu1_all.deb && wget http://192.168.1.3:8090/vyatta-op-vpn_0.15.0+vyos2+current2+nmu1_all.deb
-	test -f vyatta-cluster_0.11.25+vyos2+current1_all.deb && wget http://192.168.1.3:8090/vyatta-cluster_0.11.25+vyos2+current1_all.deb
-	test -f vyatta-conntrack_0.54+vyos2+current1_armhf.deb && wget http://192.168.1.3:8090/vyatta-conntrack_0.54+vyos2+current1_armhf.deb
-	test -f vyatta-webproxy_0.2.110+vyos2+current2_all.deb && wget http://192.168.1.3:8090/vyatta-webproxy_0.2.110+vyos2+current2_all.deb
-	test -f vyatta-zone_0.15+vyos2+current1_all.deb && wget http://192.168.1.3:8090/vyatta-zone_0.15+vyos2+current1_all.deb
-	test -f vyos-nhrp_0.1.0+vyos2+current1_all.deb && wget http://192.168.1.3:8090/vyos-nhrp_0.1.0+vyos2+current1_all.deb
-	test -f vyatta-wanloadbalance_0.13.70+vyos2+current1_armhf.deb && wget http://192.168.1.3:8090/vyatta-wanloadbalance_0.13.70+vyos2+current1_armhf.deb	
+	rm -f vyatta-cfg-system_0.20.44+vyos2+current22_armhf.deb 
+	wget http://192.168.1.3:8090/vyatta-cfg-system_0.20.44+vyos2+current22_armhf.deb
+	rm -f vyatta-bash_4.1-3+vyos2+current2_armhf.deb
+	wget http://192.168.1.3:8090/vyatta-bash_4.1-3+vyos2+current2_armhf.deb
+	rm -f vyatta-op_0.14.0+vyos2+current8_all.deb
+	wget http://192.168.1.3:8090/vyatta-op_0.14.0+vyos2+current8_all.deb
+	rm -f vyatta-cfg_0.102.0+vyos2+current4_armhf.deb
+	wget http://192.168.1.3:8090/vyatta-cfg_0.102.0+vyos2+current4_armhf.deb
+	rm -f vyatta-config-mgmt_0.34+vyos2+current2_all.deb
+	wget http://192.168.1.3:8090/vyatta-config-mgmt_0.34+vyos2+current2_all.deb
+	rm -f vyatta-cfg-firewall_0.14.0+vyos2+current2_all.deb
+	wget http://192.168.1.3:8090/vyatta-cfg-firewall_0.14.0+vyos2+current2_all.deb
+	rm -f vyatta-op-firewall_0.11.0+vyos2+current1_all.deb
+	wget http://192.168.1.3:8090/vyatta-op-firewall_0.11.0+vyos2+current1_all.deb
+	rm -f vyatta-cfg-qos_0.15.42+vyos2+current1_all.deb
+	wget http://192.168.1.3:8090/vyatta-cfg-qos_0.15.42+vyos2+current1_all.deb
+	rm -f vyatta-op-qos_0.12.27+vyos2+current1_all.deb
+	wget http://192.168.1.3:8090/vyatta-op-qos_0.12.27+vyos2+current1_all.deb
+	rm -f vyatta-cfg-quagga_0.19.1+vyos2+current9_all.deb
+	wget http://192.168.1.3:8090/vyatta-cfg-quagga_0.19.1+vyos2+current9_all.deb
+	rm -f vyatta-op-quagga_0.11.35+vyos2+current1_all.deb
+	wget http://192.168.1.3:8090/vyatta-op-quagga_0.11.35+vyos2+current1_all.deb
+	rm -f vyatta-cfg-vpn_0.12.105+vyos2+current6_all.deb
+	wget http://192.168.1.3:8090/vyatta-cfg-vpn_0.12.105+vyos2+current6_all.deb
+	rm -f vyatta-op-vpn_0.15.0+vyos2+current2+nmu1_all.deb
+	wget http://192.168.1.3:8090/vyatta-op-vpn_0.15.0+vyos2+current2+nmu1_all.deb
+	rm -f vyatta-cluster_0.11.25+vyos2+current1_all.deb
+	wget http://192.168.1.3:8090/vyatta-cluster_0.11.25+vyos2+current1_all.deb
+	rm -f vyatta-conntrack_0.54+vyos2+current1_armhf.deb
+	wget http://192.168.1.3:8090/vyatta-conntrack_0.54+vyos2+current1_armhf.deb
+	rm -f vyatta-webproxy_0.2.110+vyos2+current2_all.deb
+	wget http://192.168.1.3:8090/vyatta-webproxy_0.2.110+vyos2+current2_all.deb
+	rm -f vyatta-zone_0.15+vyos2+current1_all.deb
+	wget http://192.168.1.3:8090/vyatta-zone_0.15+vyos2+current1_all.deb
+	rm -f vyos-nhrp_0.1.0+vyos2+current1_all.deb
+	wget http://192.168.1.3:8090/vyos-nhrp_0.1.0+vyos2+current1_all.deb
+	rm -f vyatta-wanloadbalance_0.13.70+vyos2+current1_armhf.deb
+	wget http://192.168.1.3:8090/vyatta-wanloadbalance_0.13.70+vyos2+current1_armhf.deb
+	rm -f vyos-1x_1.3dev0-1935-gffb3e2dc_all.deb 
+	wget http://192.168.1.3:8090/vyos-1x_1.3dev0-1935-gffb3e2dc_all.deb	
 	cd ..
 	@scripts/live-build-config
 	@scripts/import-local-packages

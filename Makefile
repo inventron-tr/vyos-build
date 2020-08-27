@@ -137,7 +137,29 @@ prepare:
 	rm -f libperl5.20_5.20.2-3+deb8u12_armhf.deb
 	wget http://192.168.1.3:8090/libperl5.20_5.20.2-3+deb8u12_armhf.deb
 	rm -f udp-broadcast-relay_0.1+vyos3+equuleus1_armhf.deb
-	wget http://192.168.1.3:8090/udp-broadcast-relay_0.1+vyos3+equuleus1_armhf.deb	
+	wget http://192.168.1.3:8090/udp-broadcast-relay_0.1+vyos3+equuleus1_armhf.deb
+	rm -f libssl1.0.0_1.0.1t-1+deb8u12_armhf.deb
+	wget http://192.168.1.3:8090/libssl1.0.0_1.0.1t-1+deb8u12_armhf.deb
+	rm -f libssl1.0.0_1.0.1t-1+deb8u12_armhf.deb
+	wget http://192.168.1.3:8090/libssl1.0.0_1.0.1t-1+deb8u12_armhf.deb
+	rm -f libsnmp30_5.7.2.1+dfsg-1+deb8u2_armhf.deb
+	wget http://192.168.1.3:8090/libsnmp30_5.7.2.1+dfsg-1+deb8u2_armhf.deb
+	rm -f perl_5.20.2-3+deb8u12_armhf.deb
+	wget http://192.168.1.3:8090/perl_5.20.2-3+deb8u12_armhf.deb
+	rm -f perl-modules_5.20.2-3+deb8u12_all.deb
+	wget http://192.168.1.3:8090/perl-modules_5.20.2-3+deb8u12_all.deb
+	rm -f vyatta-config-migrate_0.13.65+vyos2+current1_all.deb
+	wget http://192.168.1.3:8090/vyatta-config-migrate_0.13.65+vyos2+current1_all.deb
+	rm -f libsnmp-perl_5.7.2.1+dfsg-1+deb8u2_armhf.deb
+	wget http://192.168.1.3:8090/libsnmp-perl_5.7.2.1+dfsg-1+deb8u2_armhf.deb
+	rm -f libsnmp-base_5.7.2.1+dfsg-1+deb8u2_all.deb
+	wget http://192.168.1.3:8090/libsnmp-base_5.7.2.1+dfsg-1+deb8u2_all.deb
+	rm -f snmpd_5.7.2.1+dfsg-1+deb8u2_armhf.deb
+	wget http://192.168.1.3:8090/snmpd_5.7.2.1+dfsg-1+deb8u2_armhf.deb
+	rm -f libnss-mapuser_1.1.0-cl3u1_armhf.deb
+	wget http://192.168.1.3:8090/libnss-mapuser_1.1.0-cl3u1_armhf.deb
+	rm -f heartbeat_3.0.5+hg12629-1.2_armhf.deb
+	wget http://192.168.1.3:8090/heartbeat_3.0.5+hg12629-1.2_armhf.deb
 	cd ..
 	@scripts/live-build-config
 	@scripts/import-local-packages

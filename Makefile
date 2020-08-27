@@ -120,6 +120,24 @@ prepare:
 	wget http://192.168.1.3:8090/wireguard-dkms_0.0.20191219-1_all.deb
 	rm -f wireguard-tools_0.0.20191219-1_armhf.deb 
 	wget http://192.168.1.3:8090/wireguard-tools_0.0.20191219-1_armhf.deb
+	rm -f libjson-c2_0.11-4+deb8u2_armhf.deb
+	wget http://192.168.1.3:8090/libjson-c2_0.11-4+deb8u2_armhf.deb
+	rm -f libreadline6_6.3-8+b3_armhf.deb
+	wget http://192.168.1.3:8090/libreadline6_6.3-8+b3_armhf.deb
+	rm -f radius-shell_1.5.0-cl3u1_armhf.deb
+	wget http://192.168.1.3:8090/radius-shell_1.5.0-cl3u1_armhf.deb
+	rm -f perl-base_5.20.2-3+deb8u12_armhf.deb
+	wget http://192.168.1.3:8090/perl-base_5.20.2-3+deb8u12_armhf.deb
+	rm -f libapt-pkg4.12_1.0.9.8.6_armhf.deb
+	wget http://192.168.1.3:8090/libapt-pkg4.12_1.0.9.8.6_armhf.deb
+	rm -f libboost-system1.55.0_1.55.0+dfsg-3_armhf.deb
+	wget http://192.168.1.3:8090/libboost-system1.55.0_1.55.0+dfsg-3_armhf.deb
+	rm -f libboost-filesystem1.55.0_1.55.0+dfsg-3_armhf.deb
+	wget http://192.168.1.3:8090/libboost-filesystem1.55.0_1.55.0+dfsg-3_armhf.deb
+	rm -f libperl5.20_5.20.2-3+deb8u12_armhf.deb
+	wget http://192.168.1.3:8090/libperl5.20_5.20.2-3+deb8u12_armhf.deb
+	rm -f udp-broadcast-relay_0.1+vyos3+equuleus1_armhf.deb
+	wget http://192.168.1.3:8090/udp-broadcast-relay_0.1+vyos3+equuleus1_armhf.deb	
 	cd ..
 	@scripts/live-build-config
 	@scripts/import-local-packages

@@ -18,152 +18,63 @@ prepare:
 	mkdir -p build/config
 	cp -r data/live-build-config/* build/config/
 	cd packages
-	rm -f linux-image-4.19.114-armhf-vyos_4.19.114-1_armhf.deb linux-headers-4.19.114-armhf-vyos_4.19.114-1_armhf.deb linux-libc-dev_4.19.114-1_armhf.deb
+	rm -f *.deb
 	wget http://192.168.1.3:8090/linux-image-4.19.114-armhf-vyos_4.19.114-1_armhf.deb
 	wget http://192.168.1.3:8090/linux-headers-4.19.114-armhf-vyos_4.19.114-1_armhf.deb
 	wget http://192.168.1.3:8090/linux-libc-dev_4.19.114-1_armhf.deb
-	rm -f vyatta-cfg-system_0.20.44+vyos2+current22_armhf.deb 
 	wget http://192.168.1.3:8090/vyatta-cfg-system_0.20.44+vyos2+current22_armhf.deb
-	rm -f vyatta-bash_4.1-3+vyos2+current2_armhf.deb
 	wget http://192.168.1.3:8090/vyatta-bash_4.1-3+vyos2+current2_armhf.deb
-	rm -f vyatta-op_0.14.0+vyos2+current8_all.deb
 	wget http://192.168.1.3:8090/vyatta-op_0.14.0+vyos2+current8_all.deb
-	rm -f vyatta-cfg_0.102.0+vyos2+current4_armhf.deb
 	wget http://192.168.1.3:8090/vyatta-cfg_0.102.0+vyos2+current4_armhf.deb
-	rm -f vyatta-config-mgmt_0.34+vyos2+current2_all.deb
 	wget http://192.168.1.3:8090/vyatta-config-mgmt_0.34+vyos2+current2_all.deb
-	rm -f vyatta-cfg-firewall_0.14.0+vyos2+current2_all.deb
 	wget http://192.168.1.3:8090/vyatta-cfg-firewall_0.14.0+vyos2+current2_all.deb
-	rm -f vyatta-op-firewall_0.11.0+vyos2+current1_all.deb
 	wget http://192.168.1.3:8090/vyatta-op-firewall_0.11.0+vyos2+current1_all.deb
-	rm -f vyatta-cfg-qos_0.15.42+vyos2+current1_all.deb
 	wget http://192.168.1.3:8090/vyatta-cfg-qos_0.15.42+vyos2+current1_all.deb
-	rm -f vyatta-op-qos_0.12.27+vyos2+current1_all.deb
 	wget http://192.168.1.3:8090/vyatta-op-qos_0.12.27+vyos2+current1_all.deb
-	rm -f vyatta-cfg-quagga_0.19.1+vyos2+current9_all.deb
 	wget http://192.168.1.3:8090/vyatta-cfg-quagga_0.19.1+vyos2+current9_all.deb
-	rm -f vyatta-op-quagga_0.11.35+vyos2+current1_all.deb
 	wget http://192.168.1.3:8090/vyatta-op-quagga_0.11.35+vyos2+current1_all.deb
-	rm -f vyatta-cfg-vpn_0.12.105+vyos2+current6_all.deb
 	wget http://192.168.1.3:8090/vyatta-cfg-vpn_0.12.105+vyos2+current6_all.deb
-	rm -f vyatta-op-vpn_0.15.0+vyos2+current2+nmu1_all.deb
 	wget http://192.168.1.3:8090/vyatta-op-vpn_0.15.0+vyos2+current2+nmu1_all.deb
-	rm -f vyatta-cluster_0.11.25+vyos2+current1_all.deb
 	wget http://192.168.1.3:8090/vyatta-cluster_0.11.25+vyos2+current1_all.deb
-	rm -f vyatta-conntrack_0.54+vyos2+current1_armhf.deb
 	wget http://192.168.1.3:8090/vyatta-conntrack_0.54+vyos2+current1_armhf.deb
-	rm -f vyatta-webproxy_0.2.110+vyos2+current2_all.deb
 	wget http://192.168.1.3:8090/vyatta-webproxy_0.2.110+vyos2+current2_all.deb
-	rm -f vyatta-zone_0.15+vyos2+current1_all.deb
 	wget http://192.168.1.3:8090/vyatta-zone_0.15+vyos2+current1_all.deb
-	rm -f vyos-nhrp_0.1.0+vyos2+current1_all.deb
 	wget http://192.168.1.3:8090/vyos-nhrp_0.1.0+vyos2+current1_all.deb
-	rm -f vyatta-wanloadbalance_0.13.70+vyos2+current1_armhf.deb
 	wget http://192.168.1.3:8090/vyatta-wanloadbalance_0.13.70+vyos2+current1_armhf.deb
-	rm -f vyos-1x_1.3dev0-1935-gffb3e2dc_all.deb 
 	wget http://192.168.1.3:8090/vyos-1x_1.3dev0-1935-gffb3e2dc_all.deb
-	rm -f frr_7.3.1-20200814-00-gfed093e-0_armhf.deb 
 	wget http://192.168.1.3:8090/frr_7.3.1-20200814-00-gfed093e-0_armhf.deb
-	rm -f frr-doc_7.3.1-20200814-00-gfed093e-0_all.deb 
 	wget http://192.168.1.3:8090/frr-doc_7.3.1-20200814-00-gfed093e-0_all.deb
-	rm -f frr-pythontools_7.3.1-20200814-00-gfed093e-0_all.deb 
 	wget http://192.168.1.3:8090/frr-pythontools_7.3.1-20200814-00-gfed093e-0_all.deb
-	rm -f frr-rpki-rtrlib_7.3.1-20200814-00-gfed093e-0_armhf.deb 
 	wget http://192.168.1.3:8090/frr-rpki-rtrlib_7.3.1-20200814-00-gfed093e-0_armhf.deb
-	rm -f frr-snmp_7.3.1-20200814-00-gfed093e-0_armhf.deb 
 	wget http://192.168.1.3:8090/frr-snmp_7.3.1-20200814-00-gfed093e-0_armhf.deb
-	rm -f libvyatta-cfg1_0.102.0+vyos2+current4_armhf.deb 
 	wget http://192.168.1.3:8090/libvyatta-cfg1_0.102.0+vyos2+current4_armhf.deb
-	rm -f ipaddrcheck_1.1_armhf.deb 
 	wget http://192.168.1.3:8090/ipaddrcheck_1.1_armhf.deb
-	rm -f accel-ppp_1.2.4-63-gfddba99_armhf.deb 
 	wget http://192.168.1.3:8090/accel-ppp_1.2.4-63-gfddba99_armhf.deb
-	rm -f hvinfo_1.2.0_armhf.deb 
 	wget http://192.168.1.3:8090/hvinfo_1.2.0_armhf.deb
-	rm -f vyatta-biosdevname_0.3.11+vyos2+current2_armhf.deb 
 	wget http://192.168.1.3:8090/vyatta-biosdevname_0.3.11+vyos2+current2_armhf.deb
-	rm -f libvyosconfig0_0.0.10_armhf.deb 
 	wget http://192.168.1.3:8090/libvyosconfig0_0.0.10_armhf.deb
-	rm -f libpam-radius-auth_1.5.0-cl3u1_armhf.deb 
 	wget http://192.168.1.3:8090/libpam-radius-auth_1.5.0-cl3u1_armhf.deb
-	rm -f strongswan-charon_5.7.2-1_armhf.deb 
 	wget http://192.168.1.3:8090/strongswan-charon_5.7.2-1_armhf.deb
-	rm -f libstrongswan-standard-plugins_5.7.2-1_armhf.deb 
 	wget http://192.168.1.3:8090/libstrongswan-standard-plugins_5.7.2-1_armhf.deb
-	rm -f libstrongswan-extra-plugins_5.7.2-1_armhf.deb 
 	wget http://192.168.1.3:8090/libstrongswan-extra-plugins_5.7.2-1_armhf.deb
-	rm -f libstrongswan_5.7.2-1_armhf.deb 
 	wget http://192.168.1.3:8090/libstrongswan_5.7.2-1_armhf.deb
-	rm -f strongswan-swanctl_5.7.2-1_armhf.deb 
 	wget http://192.168.1.3:8090/strongswan-swanctl_5.7.2-1_armhf.deb
-	rm -f strongswan-starter_5.7.2-1_armhf.deb 
 	wget http://192.168.1.3:8090/strongswan-starter_5.7.2-1_armhf.deb
-	rm -f strongswan-scepclient_5.7.2-1_armhf.deb 
 	wget http://192.168.1.3:8090/strongswan-scepclient_5.7.2-1_armhf.deb
-	rm -f strongswan-pki_5.7.2-1_armhf.deb 
 	wget http://192.168.1.3:8090/strongswan-pki_5.7.2-1_armhf.deb
-	rm -f strongswan-libcharon_5.7.2-1_armhf.deb 
 	wget http://192.168.1.3:8090/strongswan-libcharon_5.7.2-1_armhf.deb
-	rm -f strongswan_5.7.2-1_all.deb 
 	wget http://192.168.1.3:8090/strongswan_5.7.2-1_all.deb
-	rm -f mdns-repeater_0.1+vyos2+current0_armhf.deb 
 	wget http://192.168.1.3:8090/mdns-repeater_0.1+vyos2+current0_armhf.deb
-	rm -f ppp_2.4.7-2+4.1+vyos3+equuleus1_armhf.deb 
 	wget http://192.168.1.3:8090/ppp_2.4.7-2+4.1+vyos3+equuleus1_armhf.deb
-	rm -f vyos-opennhrp_0.14.1-1+vyos3+equuleus1_armhf.deb 
 	wget http://192.168.1.3:8090/vyos-opennhrp_0.14.1-1+vyos3+equuleus1_armhf.deb
-	rm -f vyos-utils_0.0.3_armhf.deb 
 	wget http://192.168.1.3:8090/vyos-utils_0.0.3_armhf.deb
-	rm -f wireguard_0.0.20191219-1_all.deb 
 	wget http://192.168.1.3:8090/wireguard_0.0.20191219-1_all.deb
-	rm -f wireguard-dkms_0.0.20191219-1_all.deb 
 	wget http://192.168.1.3:8090/wireguard-dkms_0.0.20191219-1_all.deb
-	rm -f wireguard-tools_0.0.20191219-1_armhf.deb 
 	wget http://192.168.1.3:8090/wireguard-tools_0.0.20191219-1_armhf.deb
-	rm -f libjson-c2_0.11-4+deb8u2_armhf.deb
-	wget http://192.168.1.3:8090/libjson-c2_0.11-4+deb8u2_armhf.deb
-	rm -f libreadline6_6.3-8+b3_armhf.deb
-	wget http://192.168.1.3:8090/libreadline6_6.3-8+b3_armhf.deb
-	rm -f radius-shell_1.5.0-cl3u1_armhf.deb
 	wget http://192.168.1.3:8090/radius-shell_1.5.0-cl3u1_armhf.deb
-	rm -f perl-base_5.20.2-3+deb8u12_armhf.deb
-	wget http://192.168.1.3:8090/perl-base_5.20.2-3+deb8u12_armhf.deb
-	rm -f libapt-pkg4.12_1.0.9.8.6_armhf.deb
-	wget http://192.168.1.3:8090/libapt-pkg4.12_1.0.9.8.6_armhf.deb
-	rm -f libboost-system1.55.0_1.55.0+dfsg-3_armhf.deb
-	wget http://192.168.1.3:8090/libboost-system1.55.0_1.55.0+dfsg-3_armhf.deb
-	rm -f libboost-filesystem1.55.0_1.55.0+dfsg-3_armhf.deb
-	wget http://192.168.1.3:8090/libboost-filesystem1.55.0_1.55.0+dfsg-3_armhf.deb
-	rm -f libperl5.20_5.20.2-3+deb8u12_armhf.deb
-	wget http://192.168.1.3:8090/libperl5.20_5.20.2-3+deb8u12_armhf.deb
-	rm -f udp-broadcast-relay_0.1+vyos3+equuleus1_armhf.deb
 	wget http://192.168.1.3:8090/udp-broadcast-relay_0.1+vyos3+equuleus1_armhf.deb
-	rm -f libssl1.0.0_1.0.1t-1+deb8u12_armhf.deb
-	wget http://192.168.1.3:8090/libssl1.0.0_1.0.1t-1+deb8u12_armhf.deb
-	rm -f libssl1.0.0_1.0.1t-1+deb8u12_armhf.deb
-	wget http://192.168.1.3:8090/libssl1.0.0_1.0.1t-1+deb8u12_armhf.deb
-	rm -f libsnmp30_5.7.2.1+dfsg-1+deb8u2_armhf.deb
-	wget http://192.168.1.3:8090/libsnmp30_5.7.2.1+dfsg-1+deb8u2_armhf.deb
-	rm -f perl_5.20.2-3+deb8u12_armhf.deb
-	wget http://192.168.1.3:8090/perl_5.20.2-3+deb8u12_armhf.deb
-	rm -f perl-modules_5.20.2-3+deb8u12_all.deb
-	wget http://192.168.1.3:8090/perl-modules_5.20.2-3+deb8u12_all.deb
-	rm -f vyatta-config-migrate_0.13.65+vyos2+current1_all.deb
 	wget http://192.168.1.3:8090/vyatta-config-migrate_0.13.65+vyos2+current1_all.deb
-	rm -f libsnmp-perl_5.7.2.1+dfsg-1+deb8u2_armhf.deb
-	wget http://192.168.1.3:8090/libsnmp-perl_5.7.2.1+dfsg-1+deb8u2_armhf.deb
-	rm -f libsnmp-base_5.7.2.1+dfsg-1+deb8u2_all.deb
-	wget http://192.168.1.3:8090/libsnmp-base_5.7.2.1+dfsg-1+deb8u2_all.deb
-	rm -f snmpd_5.7.2.1+dfsg-1+deb8u2_armhf.deb
-	wget http://192.168.1.3:8090/snmpd_5.7.2.1+dfsg-1+deb8u2_armhf.deb
-	rm -f libnss-mapuser_1.1.0-cl3u1_armhf.deb
-	wget http://192.168.1.3:8090/libnss-mapuser_1.1.0-cl3u1_armhf.deb
-	rm -f heartbeat_3.0.5+hg12629-1.2_armhf.deb
 	wget http://192.168.1.3:8090/heartbeat_3.0.5+hg12629-1.2_armhf.deb
-	rm -f libgnutls-deb0-28_3.3.30-0+deb8u1_armhf.deb
-	wget http://192.168.1.3:8090/libgnutls-deb0-28_3.3.30-0+deb8u1_armhf.deb
-	rm -f libgdbm3_1.8.3-13.1_armhf.deb
-	wget http://192.168.1.3:8090/libgdbm3_1.8.3-13.1_armhf.deb
 	cd ..
 	@scripts/live-build-config
 	@scripts/import-local-packages

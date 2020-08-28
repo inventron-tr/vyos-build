@@ -70,6 +70,8 @@ prepare:
 	wget http://192.168.1.3:8090/udp-broadcast-relay_0.1+vyos3+equuleus1_armhf.deb
 	wget http://192.168.1.3:8090/vyatta-config-migrate_0.13.65+vyos2+current1_all.deb
 	wget http://192.168.1.3:8090/libnss-mapuser_1.1.0-cl3u1_armhf.deb
+	wget http://192.168.1.3:8090/vyos-netplug_1.2.9.2-3+equuleus_armhf.deb
+	wget http://192.168.1.3:8090/keepalived_2.0.17+vyos1.2_armhf.deb
 	cd ..
 	@scripts/live-build-config
 	@scripts/import-local-packages

@@ -44,7 +44,7 @@ prepare:
 	wget http://192.168.1.3:8090/vyos-1x_1.3dev0-1935-gffb3e2dc_all.deb
 	wget http://192.168.1.3:8090/libvyatta-cfg1_0.102.0+vyos2+current4_armhf.deb
 	wget http://192.168.1.3:8090/ipaddrcheck_1.1_armhf.deb
-	wget http://192.168.1.3:8090/accel-ppp_1.2.4-63-gfddba99_armhf.deb
+	wget http://192.168.1.3:8090/accel-ppp_1.12.0-87-gbefc6e4_armhf.deb
 	wget http://192.168.1.3:8090/hvinfo_1.2.0_armhf.deb
 	wget http://192.168.1.3:8090/vyatta-biosdevname_0.3.11+vyos2+current2_armhf.deb
 	wget http://192.168.1.3:8090/libvyosconfig0_0.0.10_armhf.deb

@@ -160,6 +160,8 @@ prepare:
 	wget http://192.168.1.3:8090/libnss-mapuser_1.1.0-cl3u1_armhf.deb
 	rm -f heartbeat_3.0.5+hg12629-1.2_armhf.deb
 	wget http://192.168.1.3:8090/heartbeat_3.0.5+hg12629-1.2_armhf.deb
+	rm -f libgnutls-deb0-28_3.3.30-0+deb8u1_armhf.deb
+	wget http://192.168.1.3:8090/libgnutls-deb0-28_3.3.30-0+deb8u1_armhf.deb	
 	cd ..
 	@scripts/live-build-config
 	@scripts/import-local-packages

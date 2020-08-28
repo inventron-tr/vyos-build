@@ -74,7 +74,6 @@ prepare:
 	wget http://192.168.1.3:8090/radius-shell_1.5.0-cl3u1_armhf.deb
 	wget http://192.168.1.3:8090/udp-broadcast-relay_0.1+vyos3+equuleus1_armhf.deb
 	wget http://192.168.1.3:8090/vyatta-config-migrate_0.13.65+vyos2+current1_all.deb
-	wget http://192.168.1.3:8090/heartbeat_3.0.5+hg12629-1.2_armhf.deb
 	cd ..
 	@scripts/live-build-config
 	@scripts/import-local-packages

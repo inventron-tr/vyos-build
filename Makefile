@@ -161,7 +161,9 @@ prepare:
 	rm -f heartbeat_3.0.5+hg12629-1.2_armhf.deb
 	wget http://192.168.1.3:8090/heartbeat_3.0.5+hg12629-1.2_armhf.deb
 	rm -f libgnutls-deb0-28_3.3.30-0+deb8u1_armhf.deb
-	wget http://192.168.1.3:8090/libgnutls-deb0-28_3.3.30-0+deb8u1_armhf.deb	
+	wget http://192.168.1.3:8090/libgnutls-deb0-28_3.3.30-0+deb8u1_armhf.deb
+	rm -f libgdbm3_1.8.3-13.1_armhf.deb
+	wget http://192.168.1.3:8090/libgdbm3_1.8.3-13.1_armhf.deb
 	cd ..
 	@scripts/live-build-config
 	@scripts/import-local-packages

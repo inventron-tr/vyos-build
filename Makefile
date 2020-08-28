@@ -42,11 +42,6 @@ prepare:
 	wget http://192.168.1.3:8090/vyos-nhrp_0.1.0+vyos2+current1_all.deb
 	wget http://192.168.1.3:8090/vyatta-wanloadbalance_0.13.70+vyos2+current1_armhf.deb
 	wget http://192.168.1.3:8090/vyos-1x_1.3dev0-1935-gffb3e2dc_all.deb
-	wget http://192.168.1.3:8090/frr_7.3.1-20200814-00-gfed093e-0_armhf.deb
-	wget http://192.168.1.3:8090/frr-doc_7.3.1-20200814-00-gfed093e-0_all.deb
-	wget http://192.168.1.3:8090/frr-pythontools_7.3.1-20200814-00-gfed093e-0_all.deb
-	wget http://192.168.1.3:8090/frr-rpki-rtrlib_7.3.1-20200814-00-gfed093e-0_armhf.deb
-	wget http://192.168.1.3:8090/frr-snmp_7.3.1-20200814-00-gfed093e-0_armhf.deb
 	wget http://192.168.1.3:8090/libvyatta-cfg1_0.102.0+vyos2+current4_armhf.deb
 	wget http://192.168.1.3:8090/ipaddrcheck_1.1_armhf.deb
 	wget http://192.168.1.3:8090/accel-ppp_1.2.4-63-gfddba99_armhf.deb
@@ -74,6 +69,7 @@ prepare:
 	wget http://192.168.1.3:8090/radius-shell_1.5.0-cl3u1_armhf.deb
 	wget http://192.168.1.3:8090/udp-broadcast-relay_0.1+vyos3+equuleus1_armhf.deb
 	wget http://192.168.1.3:8090/vyatta-config-migrate_0.13.65+vyos2+current1_all.deb
+	wget http://192.168.1.3:8090/libnss-mapuser_1.1.0-cl3u1_armhf.deb
 	cd ..
 	@scripts/live-build-config
 	@scripts/import-local-packages

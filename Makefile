@@ -64,9 +64,9 @@ prepare:
 	wget http://192.168.1.3:8090/ppp_2.4.7-2+4.1+vyos3+equuleus1_armhf.deb
 	wget http://192.168.1.3:8090/vyos-opennhrp_0.14.1-1+vyos3+equuleus1_armhf.deb
 	wget http://192.168.1.3:8090/vyos-utils_0.0.3_armhf.deb
-	wget http://192.168.1.3:8090/wireguard_0.0.20191219-1_all.deb
-	wget http://192.168.1.3:8090/wireguard-dkms_0.0.20191219-1_all.deb
-	wget http://192.168.1.3:8090/wireguard-tools_0.0.20191219-1_armhf.deb
+	wget http://192.168.1.3:8090/wireguard_1.0.20200319-1~bpo10+1_all.deb
+	wget http://192.168.1.3:8090/wireguard-dkms_1.0.20200429-2~bpo10+1_all.deb
+	wget http://192.168.1.3:8090/wireguard-tools_1.0.20200319-1~bpo10+1_armhf.deb
 	wget http://192.168.1.3:8090/radius-shell_1.5.0-cl3u1_armhf.deb
 	wget http://192.168.1.3:8090/udp-broadcast-relay_0.1+vyos3+equuleus1_armhf.deb
 	wget http://192.168.1.3:8090/vyatta-config-migrate_0.13.65+vyos2+current1_all.deb

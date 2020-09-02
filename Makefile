@@ -19,9 +19,10 @@ prepare:
 	cp -r data/live-build-config/* build/config/
 	cd packages
 	rm -f *.deb
-	wget http://192.168.1.3:8090/linux-image-4.19.114-armhf-vyos_4.19.114-1_armhf.deb
-	wget http://192.168.1.3:8090/linux-headers-4.19.114-armhf-vyos_4.19.114-1_armhf.deb
-	wget http://192.168.1.3:8090/linux-libc-dev_4.19.114-1_armhf.deb
+	wget http://192.168.1.3:8090/linux-image-4.19.139-armhf-vyos_4.19.139-1_armhf.deb
+	wget http://192.168.1.3:8090/linux-headers-4.19.139-armhf-vyos_4.19.139-1_armhf.deb
+	wget http://192.168.1.3:8090/linux-libc-dev_4.19.139-1_armhf.deb
+	wget http://192.168.1.3:8090/linux-tools-4.19.139-armhf-vyos_4.19.139-1_armhf.deb
 	wget http://192.168.1.3:8090/vyatta-cfg-system_0.20.44+vyos2+current22_armhf.deb
 	wget http://192.168.1.3:8090/vyatta-bash_4.1-3+vyos2+current2_armhf.deb
 	wget http://192.168.1.3:8090/vyatta-op_0.14.0+vyos2+current8_all.deb

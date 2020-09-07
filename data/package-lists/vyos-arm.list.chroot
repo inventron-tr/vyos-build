@@ -1,1 +1,4 @@
 grub-efi-arm
+syslinux-efi
+isolinux
+grub-common

@@ -8,12 +8,14 @@ if [ ! -d ${KERNEL_SRC} ]; then
 fi
 
 echo "I: Copy Kernel config (x86_64_vyos_defconfig) to Kernel Source"
-cp x86_64_vyos_defconfig ${KERNEL_SRC}/arch/x86/configs
+cp vyos_arm_defconfig ${KERNEL_SRC}/.config
+cp lsdk.config ${KERNEL_SRC}/arch/arm/configs
+#cp x86_64_vyos_defconfig ${KERNEL_SRC}/arch/arm64/configs
 
 cd ${KERNEL_SRC}
 
-KERNEL_VERSION=$(make kernelversion)
-KERNEL_SUFFIX=-$(dpkg --print-architecture)-vyos
+KERNEL_VERSION=$(make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- kernelversion)
+KERNEL_SUFFIX=-armhf-vyos
 
 # VyOS requires some small Kernel Patches - apply them here
 # It's easier to habe them here and make use of the upstream
@@ -28,7 +30,9 @@ done
 
 echo "I: make x86_64_vyos_defconfig"
 # Select Kernel configuration - currently there is only one
-make x86_64_vyos_defconfig
+#make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- menuconfig
+#make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- -j4
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- lsdk.config -j4
 
 echo "I: Generate environment file containing Kernel variable"
 cat << EOF >${CWD}/kernel-vars
@@ -39,4 +43,4 @@ export KERNEL_DIR=${CWD}/${KERNEL_SRC}
 EOF
 
 echo "I: Build Debian Kernel package"
-make bindeb-pkg BUILD_TOOLS=1 LOCALVERSION=${KERNEL_SUFFIX} KDEB_PKGVERSION=${KERNEL_VERSION}-1 -j $(getconf _NPROCESSORS_ONLN)
+make ARCH=arm CROSS_COMPILE=arm-linux-gnueabihf- bindeb-pkg BUILD_TOOLS=1 LOCALVERSION=${KERNEL_SUFFIX} KDEB_PKGVERSION=${KERNEL_VERSION}-1 KBUILD_DEBARCH=armhf -j $(getconf _NPROCESSORS_ONLN)

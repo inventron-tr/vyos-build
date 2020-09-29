@@ -9,12 +9,14 @@
     {
       "name": "qemu-image",
       "type": "qemu",
+      "machine_type": "virt",
       "iso_url": "{{user `iso_url`}}",
       "iso_checksum": "md5:{{user `iso_checksum`}}",
       "output_directory": "{{user `output_directory`}}/qemu",
       "shutdown_command": "sudo halt -p",
       "disk_size": 4096,
       "format": "qcow2",
+      "qemu_binary": "qemu-system-arm",
       "headless": true,
       "ssh_host_port_min": 2222,
       "ssh_host_port_max": 2229,
@@ -23,7 +25,14 @@
       "ssh_port": 22,
       "ssh_wait_timeout": "300s",
       "vm_name": "vyos_qemu_image.img",
-      "net_device": "virtio-net",
+      "qemuargs": [
+        ["-cpu", "cortex-a15"],                         
+        ["-netdev","user,id=mynet"],
+        ["-device","virtio-net-device,netdev=mynet"],
+        ["-drive","file=packer_build/qemu/vyos_qemu_image.img,if=virtio,cache=writeback,discard=ignore,format=qcow2,id=hd"],
+        ["-device","virtio-blk-device,drive=hd"],
+        ["-device", "virtio-scsi,id=scsi0,index=0"]              
+      ], 
       "disk_interface": "virtio",
       "boot_wait": "5s",
       "boot_command":

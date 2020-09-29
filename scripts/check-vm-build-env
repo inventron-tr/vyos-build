@@ -27,7 +27,7 @@ import util
 deps = {
     'packages': [
       'jq',
-      'qemu-system-x86',
+      'qemu-system-arm',
       'qemu-utils'
     ],
    'binaries': ['packer']

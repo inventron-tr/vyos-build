@@ -1,4 +1,6 @@
 grub-efi-arm
-syslinux-efi
+syslinux-common
 isolinux
 grub-common
+qemu-guest-agent
+efibootmgr
